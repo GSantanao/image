@@ -18,6 +18,6 @@ public class ImageServiceImpl implements ImageService {
     @Transactional
 
     public Image save(Image image){
-        return null;
+        return repository.save(image);
     }
 }
