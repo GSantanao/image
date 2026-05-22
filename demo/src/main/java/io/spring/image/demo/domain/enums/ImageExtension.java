@@ -27,5 +27,11 @@ public enum ImageExtension {
 
 
     }
+    public static ImageExtension ofName(String name){
+        return Arrays.stream(values())
+                .filter(ie-> ie.name().equals(name))
+                .findFirst()
+                .orElse(null);
+    }
 
 }
